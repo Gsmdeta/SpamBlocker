@@ -91,7 +91,7 @@ It works without replacing your call/SMS app. You can kill the app after setup, 
 | Regex<br>(regular expression) | Check the [Wiki](https://github.com/aj3423/SpamBlocker/wiki/Regex-Workflow-Templates) for examples.                                                                                            |
 
 # Limitations 
-- Auto clear SMS: [No plan](https://github.com/aj3423/SpamBlocker/issues/647)
+- Auto clear SMS: available through the optional QUIK integration; direct deletion remains unavailable when another SMS app is the default handler
 - RCS support: [No plan](https://github.com/aj3423/SpamBlocker/issues/308#issuecomment-2692269430)
 - Android 9- support: [No plan](https://github.com/aj3423/SpamBlocker/issues/38)
 
