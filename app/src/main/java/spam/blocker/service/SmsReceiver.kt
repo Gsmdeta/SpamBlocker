@@ -64,7 +64,8 @@ open class SmsReceiver : BroadcastReceiver() {
         // When QUIK is configured as the active SpamBlocker screening client,
         // QUIK owns the SMS notification and deletion flow. Avoid processing
         // the same broadcast a second time here.
-        if (spf.QuikIntegration(ctx).isEnabled && QuikIntegration.isQuikDefaultSmsApp(ctx)) {
+        if (spam.blocker.util.spf.QuikIntegration(ctx).isEnabled &&
+            QuikIntegration.isQuikDefaultSmsApp(ctx)) {
             return
         }
 
