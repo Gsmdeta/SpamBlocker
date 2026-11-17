@@ -15,8 +15,9 @@ import spam.blocker.util.spf
  * Small, local integration surface for QUIK.
  *
  * QUIK is the default SMS app and therefore owns the system SMS provider. It
- * asks SpamBlocker for a decision, then performs the delete itself when its
- * existing "Drop messages" option is enabled.
+ * asks SpamBlocker for a decision, then performs the delete itself for a
+ * detected advertisement. The SpamBlocker result can request this single
+ * message deletion independently of QUIK's global "Drop messages" option.
  */
 object QuikIntegration {
     const val AUTHORITY = "spam.blocker.quik"
