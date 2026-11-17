@@ -147,6 +147,11 @@
             </intent-filter>
         </service>
 
+        <provider
+            android:name=".service.QuikScreeningProvider"
+            android:authorities="spam.blocker.quik"
+            android:exported="true" />
+
         <receiver
             android:name=".service.CallStateReceiver"
             android:exported="true" >

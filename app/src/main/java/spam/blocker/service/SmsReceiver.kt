@@ -61,6 +61,14 @@ open class SmsReceiver : BroadcastReceiver() {
             return
         }
 
+        // When QUIK is configured as the active SpamBlocker screening client,
+        // QUIK owns the SMS notification and deletion flow. Avoid processing
+        // the same broadcast a second time here.
+        if (spam.blocker.util.spf.QuikIntegration(ctx).isEnabled &&
+            QuikIntegration.isQuikDefaultSmsApp(ctx)) {
+            return
+        }
+
         val messages = Telephony.Sms.Intents.getMessagesFromIntent(intent)
         // A single long message can be split into multiple parts due to character
         // limitations of SMS messages. These parts are then reassembled by the

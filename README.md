@@ -60,6 +60,10 @@ It works without replacing your call/SMS app. You can kill the app after setup, 
     
   Similar to call screening, the app can work as a service. The SMS app asks it to check messages in real time, this app simply replies "block" or "allow". It only works with SMS apps that support this [SMS screening protocol](https://github.com/aj3423/SpamBlocker/wiki/SMS-Screening-protocol). Currently, this is not supported by any SMS app :)
 
+#### QUIK integration:
+
+  A patched QUIK build can select SpamBlocker under **Blocking Manager**. QUIK sends the complete incoming SMS to SpamBlocker for screening and keeps ownership of the Android SMS provider. Enable QUIK's **Drop messages** option when blocked messages should be deleted instead of hidden. The integration accepts calls only from the active QUIK default SMS package.
+
 # Features:
 
 | Filter                        | It checks                                                                                                                                                                                      |
@@ -87,7 +91,7 @@ It works without replacing your call/SMS app. You can kill the app after setup, 
 | Regex<br>(regular expression) | Check the [Wiki](https://github.com/aj3423/SpamBlocker/wiki/Regex-Workflow-Templates) for examples.                                                                                            |
 
 # Limitations 
-- Auto clear SMS: [No plan](https://github.com/aj3423/SpamBlocker/issues/647)
+- Auto clear SMS: available through the optional QUIK integration; direct deletion remains unavailable when another SMS app is the default handler
 - RCS support: [No plan](https://github.com/aj3423/SpamBlocker/issues/308#issuecomment-2692269430)
 - Android 9- support: [No plan](https://github.com/aj3423/SpamBlocker/issues/38)
 

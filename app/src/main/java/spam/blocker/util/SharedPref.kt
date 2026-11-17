@@ -202,6 +202,10 @@ class spf { // for namespace only
         var ignorePriorityConflict by bool("ignore_priority_conflict")
     }
 
+    class QuikIntegration(ctx: Context) : SharedPref(ctx) {
+        var isEnabled by bool("quik_integration_enabled")
+    }
+
     class SettingSections(ctx: Context) : SharedPref(ctx) {
         var isScreeningSectionCollapsed by bool("screening_section_collapsed")
         var isQuickSettingsCollapsed by bool("quick_settings_collapsed")
